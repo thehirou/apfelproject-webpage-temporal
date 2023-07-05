@@ -41,6 +41,46 @@ body {
   text-align: center;
 }
 
+#apfel-font-alt {
+  opacity: 0.5;
+  margin-top: -20px;
+  line-height: 30px;
+  font-family: "CustomFont", sans-serif;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  transition: opacity 0.5s, box-shadow 0.5s;
+}
+
+#apfel-font-alt a {
+  text-decoration: none;
+}
+
+@keyframes shake {
+  0% { transform: translate(0, 0); }
+  10% { transform: translate(-2px, -2px); }
+  20% { transform: translate(2px, 2px); }
+  30% { transform: translate(-2px, 0); }
+  40% { transform: translate(2px, 0); }
+  50% { transform: translate(-2px, 2px); }
+  60% { transform: translate(2px, -2px); }
+  70% { transform: translate(0, 2px); }
+  80% { transform: translate(0, -2px); }
+  90% { transform: translate(2px, 0); }
+  100% { transform: translate(0, 0); }
+}
+
+#apfel-font-alt:hover {
+  opacity: 1;
+  text-shadow: 0 0 10px #fff;
+  animation: shake 2s ease-in-out infinite;
+}
+
+
+
+
+
+
 #apfel-font-bigger{
 	font-size: 30px;
 	margin-bottom: -10px;

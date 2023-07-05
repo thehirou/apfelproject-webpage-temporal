@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>APFEL PROJECT</title>
+  <link rel="icon" type="image/png" href="media/Logo.png">
+  
+<meta property="og:image" content="media/web_card.png">
+<meta property="og:image:secure_url" content="media/web_card.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+<audio id="bgm" hidden="hidden" controls autoplay loop>
+  <source src="media/i_see_you.ogg" type="audio/ogg">
+  get a new browser if you can see this text lol
+</audio>
+
+<script>
+let bgm = document.getElementById("bgm");
+bgm.play().catch(() => {
+  document.addEventListener("click", () => {
+    bgm.currentTime = 0; // Reset audio to the beginning <!-- (Thanks dimden) -->
+    bgm.play();
+  }, { once: true });
+});
+
+// When the audio finishes, reset it to the beginning and play again
+bgm.addEventListener("ended", () => {
+  bgm.currentTime = 0; // Reset audio to the beginning
+  bgm.play();
+});
+</script>
+
+
+</head>
+<body>
+
+
+
+
+  <div class="container">
+    <!-- <img src="media/logo_placeholder.png" alt="Apfel Project logotype"> -->
+	
+		<p id="apfel-font-bigger">I SEE WHAT YOU'RE TRYING TO DO<span style="color: white;"></span></p>
+		<!-- <p id="apfel-font">The Apfel Project DEMO will be released <span style="color: white;">December 20th 2023</span></p> -->
+
+	
+  </div>
+</body>
+</html>
