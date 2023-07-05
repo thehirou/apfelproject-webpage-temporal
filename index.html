@@ -44,7 +44,7 @@ bgm.addEventListener("ended", () => {
     <!-- <img src="media/logo_placeholder.png" alt="Apfel Project logotype"> -->
 	
 		<p id="apfel-font-bigger">APFEL PRµJECT <span style="color: white;"></span></p>
-		<p id="apfel-font">The Apfel Project DEMO will be released <span style="color: white;">December 20th 2023</span></p>
+		<!-- <p id="apfel-font">The Apfel Project DEMO will be released <span style="color: white;">December 20th 2023</span></p> -->
 
 
 
@@ -74,13 +74,13 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  document.getElementById("demo").innerHTML ="The Apfel Project DEMO will be released December 20th 2023" + "<br>" + days + "d " + hours + "h "
   + minutes + "m " + seconds + "s ";
 
   // If the count down is finished, write some text
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
+    document.getElementById("demo").innerHTML = "The \'Apfel Project\' ACT 1 is now available!";
   }
 }, 1000);
 </script>

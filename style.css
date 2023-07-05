@@ -18,7 +18,8 @@ body {
 
 #demo {
   font-family: "CustomFont", sans-serif; /* Replace "CustomFont" with your desired font */
-  color:white;
+  color: white;
+  text-align: center;
 }
 
 .container {
