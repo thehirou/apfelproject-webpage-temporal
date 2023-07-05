@@ -1,0 +1,49 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #0f0f0f;
+}
+
+@font-face {
+  font-family: "CustomFont";
+  src: url("media/apfelFontV01.ttf") format("truetype");
+}
+
+.apfel-font h1 {
+  font-family: "CustomFont", sans-serif;
+}
+
+#demo {
+  font-family: "CustomFont", sans-serif; /* Replace "CustomFont" with your desired font */
+  color:white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container img {
+  margin-bottom: 20px;
+}
+
+#apfel-font{
+	margin-bottom: -20px;
+  font-family: "CustomFont", sans-serif;
+  color: white;
+  text-align: center;
+}
+
+#apfel-font-bigger{
+	font-size: 30px;
+	margin-bottom: -10px;
+  font-family: "CustomFont", sans-serif;
+  color: white;
+  text-align: center;
+}
