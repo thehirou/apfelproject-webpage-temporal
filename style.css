@@ -20,6 +20,8 @@ body {
   font-family: "CustomFont", sans-serif; /* Replace "CustomFont" with your desired font */
   color: white;
   text-align: center;
+  margin-bottom: -20px;
+  line-height: 37px;;
 }
 
 .container {
@@ -35,15 +37,23 @@ body {
 }
 
 #apfel-font{
+  width: 900px;
 	margin-bottom: -20px;
+  line-height: 37px;;
   font-family: "CustomFont", sans-serif;
   color: white;
   text-align: center;
 }
 
+.separator
+{
+  height: 10px;
+}
+
 #apfel-font-alt {
   opacity: 0.5;
-  margin-top: -20px;
+  margin-top: 10px;
+  margin-bottom: -20px;
   line-height: 30px;
   font-family: "CustomFont", sans-serif;
   color: white;
@@ -52,23 +62,50 @@ body {
   transition: opacity 0.5s, box-shadow 0.5s;
 }
 
+#audio-element {
+  display: none;
+}
+
 #apfel-font-alt a {
   text-decoration: none;
 }
 
 @keyframes shake {
-  0% { transform: translate(0, 0); }
-  10% { transform: translate(-2px, -2px); }
-  20% { transform: translate(2px, 2px); }
-  30% { transform: translate(-2px, 0); }
-  40% { transform: translate(2px, 0); }
-  50% { transform: translate(-2px, 2px); }
-  60% { transform: translate(2px, -2px); }
-  70% { transform: translate(0, 2px); }
-  80% { transform: translate(0, -2px); }
-  90% { transform: translate(2px, 0); }
-  100% { transform: translate(0, 0); }
+  0% {
+    transform: translate(0, 0) rotate(0);
+  }
+  10% {
+    transform: translate(-2px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(2px, 2px) rotate(1deg);
+  }
+  30% {
+    transform: translate(-2px, 0) rotate(-1deg);
+  }
+  40% {
+    transform: translate(2px, 0) rotate(1deg);
+  }
+  50% {
+    transform: translate(-2px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(2px, -2px) rotate(1deg);
+  }
+  70% {
+    transform: translate(0, 2px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(0, -2px) rotate(1deg);
+  }
+  90% {
+    transform: translate(2px, 0) rotate(-1deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0);
+  }
 }
+
 
 #apfel-font-alt:hover {
   opacity: 1;
@@ -78,12 +115,49 @@ body {
 
 
 
+.container-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-logo a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-logo {
+  opacity: 0.5;
+  width: 40%;
+  height: auto;
+  transition: opacity 0.3s ease;
+  margin: 0 0px;
+}
+
+
+
+.image-logo:hover {
+  opacity: 1;
+  filter: drop-shadow(0 0 10px white) brightness(150%);
+  animation: glow 1s infinite alternate;
+  animation: shake 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0% {
+    filter: drop-shadow(0 0 10px white) brightness(150%);
+  }
+  100% {
+    filter: drop-shadow(0 0 20px white) brightness(150%);
+  }
+}
 
 
 
 #apfel-font-bigger{
 	font-size: 30px;
-	margin-bottom: -10px;
+	margin-bottom: -30px;
   font-family: "CustomFont", sans-serif;
   color: white;
   text-align: center;

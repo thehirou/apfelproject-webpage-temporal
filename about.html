@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>APFEL PROJECT</title>
+  <link rel="icon" type="image/png" href="media/Logo.png">
+  
+<meta property="og:image" content="media/web_card.png">
+<meta property="og:image:secure_url" content="media/web_card.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+<audio id="bgm" hidden="hidden" controls autoplay loop>
+  <source src="media/mus_wow_a_piano_loop.ogg" type="audio/ogg">
+  get a new browser if you can see this text lol
+</audio>
+
+
+
+
+
+<script>
+let bgm = document.getElementById("bgm");
+bgm.play().catch(() => {
+  document.addEventListener("click", () => {
+    bgm.currentTime = 0; // Reset audio to the beginning <!-- (Thanks dimden) -->
+    bgm.play();
+  }, { once: true });
+});
+
+// When the audio finishes, reset it to the beginning and play again
+bgm.addEventListener("ended", () => {
+  bgm.currentTime = 0; // Reset audio to the beginning
+  bgm.play();
+});
+</script>
+
+
+</head>
+<body>
+
+
+
+
+  <div class="container">
+    <!-- <img src="media/logo_placeholder.png" alt="Apfel Project logotype"> -->
+	
+		<p id="apfel-font-bigger">ABµUT <span style="color: white;"></span></p>
+
+    <div class="separator"> </div>
+    <div class="separator"> </div>
+
+
+		<p id="apfel-font">
+     The 'Apfel Project' is an indie RPG with prerendered backgrounds being developed by Hirou about a girl named Apfel and a rat named Kase.
+    <br>
+    <br>
+     These two folks start a journey to seek what's hiding on the other side of the mountains that surround their land only to discover the secrets behind Apfel's existence...
+     <br>
+     <br>
+     I'm pretty sure that you will love my game if you like things like Fullmetal Alchemist, Final Fantasy VII, Adventure Time, Mario and Luigi RPGs, Homestuck and all types of rodents.
+    </p>
+    <div class="separator"> </div>
+    <div class="separator"> </div>
+    <div class="separator"> </div>
+    <div class="separator"> </div>
+    <div class="separator"> </div>
+
+  <div class="container-logo">
+
+      <a href="index.html">
+        <img src="media/apfel-logo.png" alt="Tumblr Logo" class="image-logo">
+      </a>
+
+      <a href="https://www.tumblr.com/thehirou">
+        <img src="media/tumblr-logo.png" alt="Tumblr Logo" class="image-logo">
+      </a>
+
+      <a href="https://www.twitter.com/thehirou">
+        <img src="media/twitter-logo.png" alt="Twitter Logo" class="image-logo">
+      </a>
+
+      <audio id="hover-sound">
+        <source src="media/hover.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+      </audio>
+
+  </div>
+
+
+		
+	<!-- Display the countdown timer in an element -->
+
+	
+  </div>
+
+  <script>
+    // Get the image element and audio element
+  const image = document.querySelector('.container-logo');
+  const audio = document.getElementById('hover-sound');
+  
+  // Add event listeners for mouseenter and mouseleave
+  image.addEventListener('mouseenter', playSound);
+  image.addEventListener('mouseleave', stopSound);
+  
+  // Function to play the sound
+  function playSound() {
+    audio.currentTime = 0; // Reset audio to the beginning
+    audio.play();
+  }
+  
+  // Function to stop the sound
+  function stopSound() {
+    audio.pause();
+    audio.currentTime = 0; // Reset audio to the beginning
+  }
+  </script>
+
+
+</body>
+</html>
