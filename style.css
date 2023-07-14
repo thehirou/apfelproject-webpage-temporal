@@ -62,6 +62,16 @@ body {
   transition: opacity 0.5s, box-shadow 0.5s;
 }
 
+div#invisible
+{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 500px;
+  width: 50%;
+  opacity:0;
+}
+
 #audio-element {
   display: none;
 }
