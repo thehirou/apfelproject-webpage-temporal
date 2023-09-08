@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WELCOME</title>
+  <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Consolas, monaco, monospace;
+            line-height: 1;
+            margin: 20px;
+        }
+
+        a {
+            color: green;
+            text-decoration: none;
+        }
+  </style>
+</head>
+<body>
+  <div id="wordDisplay"> </div>
+  <script>
+    const words = ["ieisrpanes","sniiaperes","eiaerpssin","eissripaen","npeesriias","sinesperia","pesieasrni","renipsaeis","ispansieer","ieseainsrp","ispeisnear","esianesrip","srniiesape"]; // Add your initial words here in lowercase
+    let currentIndex = 0;
+
+    const wordDisplay = document.getElementById("wordDisplay");
+
+    function changeWord() {
+      wordDisplay.textContent = "> "+words[currentIndex].toUpperCase();
+      currentIndex = (currentIndex + 1) % words.length;
+    }
+
+    setInterval(changeWord, 50);
+
+  </script>
+</body>
+</html>
