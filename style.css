@@ -16,6 +16,8 @@ body {
   font-family: "CustomFont", sans-serif;
 }
 
+
+
 #demo {
   font-family: "CustomFont", sans-serif; /* Replace "CustomFont" with your desired font */
   color: white;
@@ -43,6 +45,11 @@ body {
   font-family: "CustomFont", sans-serif;
   color: white;
   text-align: center;
+}
+
+#apfel-font a {
+  color: white;
+  text-decoration: none;
 }
 
 .separator
