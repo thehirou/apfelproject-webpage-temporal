@@ -1,0 +1,7 @@
+{
+    "latest_version_real": 1.09,
+    "latest_version_string": "Alpha 1.0.9",
+    "date_string": "20-Nov-2023",
+    "message_if_match": "You are using the latest version! You're good to go!",
+    "message_if_update": "Warning, you're running an old version, the latest version is Alpha 1.0.9"
+}
