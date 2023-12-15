@@ -16,6 +16,47 @@ body {
   font-family: "CustomFont", sans-serif;
 }
 
+#game-links {
+  font-size: 10px;
+  font-family: "CustomFont", sans-serif;
+  opacity: 0.3;
+  margin-top: 10px;
+  margin-bottom: -20px;
+  line-height: 30px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  transition: opacity 0.5s, box-shadow 0.5s;
+}
+
+.readme-text
+{
+  width: 640px;
+  height: 100%;
+}
+
+#game-readme-title {
+  font-size: 16px;
+  font-family: "CustomFont", sans-serif;
+  opacity: 1;
+  line-height: 40px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  transition: opacity 0.5s, box-shadow 0.5s;
+}
+
+#game-readme {
+  font-size: 12px;
+  font-family: "CustomFont", sans-serif;
+  opacity: 0.7;
+  line-height: 25px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  transition: opacity 0.5s, box-shadow 0.5s;
+}
+
 #demo {
   font-family: "CustomFont", sans-serif; /* Replace "CustomFont" with your desired font */
   color: white;
@@ -30,6 +71,30 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
+}
+
+.mygamecanvas{
+  width: 640px;
+  height: 480px;
+  border: 5px;
+  border-color: #80fe80;
+  border-style: groove;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0px;
+  height: 100%;
+}
+
+.game-separator{
+  height: 20px;
+}
+
+.text-game-separator{
+  height: 10px;
 }
 
 .container img {
@@ -123,6 +188,12 @@ div#invisible
 
 
 #apfel-font-alt:hover {
+  opacity: 1;
+  text-shadow: 0 0 10px #fff;
+  animation: shake 2s ease-in-out infinite;
+}
+
+#game-links:hover {
   opacity: 1;
   text-shadow: 0 0 10px #fff;
   animation: shake 2s ease-in-out infinite;
