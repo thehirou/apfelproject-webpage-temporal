@@ -29,6 +29,19 @@ body {
   transition: opacity 0.5s, box-shadow 0.5s;
 }
 
+#game-links-big {
+  font-size: 12px;
+  font-family: "CustomFont", sans-serif;
+  opacity: 0.3;
+  margin-top: 10px;
+  margin-bottom: -20px;
+  line-height: 30px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  transition: opacity 0.5s, box-shadow 0.5s;
+}
+
 .readme-text
 {
   width: 640px;
@@ -194,6 +207,12 @@ div#invisible
 }
 
 #game-links:hover {
+  opacity: 1;
+  text-shadow: 0 0 10px #fff;
+  animation: shake 2s ease-in-out infinite;
+}
+
+#game-links-big:hover {
   opacity: 1;
   text-shadow: 0 0 10px #fff;
   animation: shake 2s ease-in-out infinite;
