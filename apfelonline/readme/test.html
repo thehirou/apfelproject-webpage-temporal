@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON Data Table</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+
+<h1>JSON Data Table</h1>
+
+<table id="jsonTable"></table>
+
+<script>
+  // Replace 'your_url_here' with the actual URL from which you want to fetch JSON data
+  var apiUrl = 'your_url_here';
+
+  // Fetch JSON data from the URL
+  fetch(apiUrl)
+    .then(response => response.json())
+    .then(jsonData => {
+      // Create a table dynamically
+      var table = document.getElementById('jsonTable');
+      var headerRow = table.insertRow(0);
+
+      // Create table header
+      for (var key in jsonData) {
+        var headerCell = headerRow.insertCell();
+        headerCell.textContent = key;
+      }
+
+      // Create table rows
+      for (var key in jsonData) {
+        var row = table.insertRow();
+        var cell = row.insertCell();
+        cell.textContent = jsonData[key];
+      }
+    })
+    .catch(error => console.error('Error fetching JSON:', error));
+</script>
+
+</body>
+</html>
