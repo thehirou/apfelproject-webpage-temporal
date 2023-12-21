@@ -4,6 +4,6 @@
     "date_string": "21-Dec-2023",
     "message_if_match": "You are using the latest version! You're good to go!",
     "message_if_update": "Warning, you're running an different version, the latest version is Release 1.0.3",
-    "server_maintenance": "open",
+    "server_maintenance": "closed",
     "closed_msg": "SERVERS ARE CLOSED TEMPORARILY FOR MAINTENANCE (21-DEC-2023)"
 }
