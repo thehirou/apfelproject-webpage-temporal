@@ -134,6 +134,13 @@ body{
         </canvas>
       </div>
   </div>
+
+<div class="chatroom-container-container">
+<div id="chat-container" class="chatroom-container">
+
+</div>
+</div>
+
   <div class="text-game-separator"></div>
   <div>
   <a id="game-links" target="_blank" href="readme/controls.html" >Controls</a>
@@ -162,6 +169,70 @@ body{
   
 
   <script>window.onload = GameMaker_Init;</script>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Replace 'chat-container' with the actual ID of your chat container
+        var chatContainer = document.getElementById('chat-container');
+    
+        // Scroll the chat container to the bottom
+        chatContainer.scrollTop = chatContainer.scrollHeight;
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Replace 'YOUR_API_KEY' and adjust the API endpoint as needed
+        const apiKey = 'xbt9wYJfJictC5MwljT3tGV2jCc2';
+        const apiUrl = 'https://apps.rocketnetworking.net/api/database/logs/chat';
+    
+        function fetchData() {
+            // Make a GET request to retrieve the document
+            fetch(apiUrl, {
+                method: 'GET',
+                headers: {
+                    'Authorization': apiKey,
+                }
+            })
+            .then(response => {
+                // Check if the request was successful (status code 200)
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Convert JSON data to HTML and display in the chat container
+                const chatContainer = document.getElementById('chat-container');
+                chatContainer.innerHTML = '';
+    
+                // Get the keys (message IDs) and sort them in ascending order
+                const messageKeys = Object.keys(data).sort();
+    
+                // Iterate over the sorted message keys
+                for (const messageKey of messageKeys) {
+                    const messageDiv = document.createElement('div');
+                    messageDiv.textContent = data[messageKey];
+                    chatContainer.appendChild(messageDiv);
+                }
+    
+                // Scroll the chat container to the bottom
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+            })
+            .catch(error => {
+                // Handle errors
+                console.error("Fetch error:", error);
+            });
+        }
+    
+        // Fetch data initially
+        fetchData();
+    
+        // Set up a setInterval to fetch data every 5 seconds (adjust as needed)
+        setInterval(fetchData, 5000);
+    });
+    </script>
+
 
   </div>
 </body>

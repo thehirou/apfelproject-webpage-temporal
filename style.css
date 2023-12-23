@@ -9,12 +9,42 @@ body {
 
 @font-face {
   font-family: "CustomFont";
-  src: url("media/apfelFontV01.ttf") format("truetype");
+  src: url("media/apfelFontV01.ttf") f  ormat("truetype");
 }
 
 .apfel-font h1 {
   font-family: "CustomFont", sans-serif;
 }
+
+.chatroom-container-container
+{
+  margin: 20px;
+  background-color: #000000; 
+  /* background-color: #a10000;  */
+  border: 5px;
+  border-color: #80fe80;
+  border-style: groove;
+}
+
+.chatroom-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 640px;
+  height: 200px;
+  color: #80fe80;
+  overflow: auto;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.chatroom-container div {
+  padding: 1px; 
+  margin-top: auto;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 1px;
+}
+
 
 #game-links {
   font-size: 10px;
