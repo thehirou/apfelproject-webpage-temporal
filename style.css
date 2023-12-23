@@ -2,7 +2,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
   margin: 0;
   background-color: #000000;
 }
@@ -17,7 +17,6 @@ body {
 }
 
 .top-image-game {
-  position: fixed;
   top: 50px;
   left: 50px;
 }
@@ -34,6 +33,7 @@ body {
 }
 
 .chatroom-container {
+  font-family: Courier, monospace;
   margin-top: 20px;
   margin-bottom: 20px;
   width: 640px;
@@ -51,6 +51,21 @@ body {
   margin-right: 20px;
   margin-bottom: 1px;
 }
+
+#readme-links a {
+  font-size: 10px;
+  font-family: "CustomFont", sans-serif;
+  opacity: 0.3;
+  margin-top: 10px;
+  margin-bottom: -20px;
+  line-height: 30px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  display: block; /* Add this line to create a line break for each <a> element */
+  transition: opacity 0.5s, box-shadow 0.5s;
+}
+
 
 
 #game-links {
@@ -72,7 +87,7 @@ body {
   opacity: 0.3;
   margin-top: 10px;
   margin-bottom: -20px;
-  line-height: 30px;
+  line-height: 25px;
   color: white;
   text-decoration: none;
   text-align: center;

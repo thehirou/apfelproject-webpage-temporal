@@ -116,17 +116,13 @@ body{
 <body>
 
 
-
-<img src="../media/apfelonline.png" class="top-image-game" alt="Apfel Online Logo" width="20%">
   <div class="game-container">
     <div class="game-separator"></div>
     
     <div class="game-separator"></div>
     <div class="gm4html5_div_class" id="gm4html5_div_id">
-            
       <!-- Builtin injector for splash screen -->
       
-
       <!-- Create the canvas element the game draws to -->
       <div class="mygamecanvas">
         <canvas id="canvas" width="640" height="480" >
@@ -140,54 +136,35 @@ body{
 
 </div>
 </div>
-
-<div class="text-game-separator"></div>
 <div>
-<a id="game-links" target="_blank" href="readme/controls.html" >Controls</a>
-<a id="game-links"> / </a>
-<a id="game-links" target="_blank" href="readme/credits.html" >Credits</a>
-<a id="game-links"> / </a>
-<a id="game-links" target="_blank" href="readme/disclaimer.html" >Disclaimer</a>
-<a id="game-links"> / </a>
-<a id="game-links" target="_blank" href="readme/privacy_policy.html" >Privacy Policy</a>
-<a id="game-links"> / </a>
-<a id="game-links" target="_blank" href="readme/roadmap.html" >Roadmap</a>
-<a id="game-links"> / </a>
-<a id="game-links" target="_blank" href="readme/shop.html" >Shop</a>
-<a id="game-links"> / </a>
-<a id="game-links" target="_blank" href="readme/discord.html" >Discord</a>
-<a id="game-links"> / </a>
-<a id="game-links" target="_blank" href="https://forms.gle/Qq2SUnS6KUwwDmuP9" >Report a bug</a> 
+<a id="game-links" target="_blank" href="readme/" >Readme</a>
+<a id="game-links" target="_blank" >/</a>
+<a id="game-links" target="_blank" href="readme/chatlog.html" >Chat Log</a>
 
 <div class="text-game-separator"></div>
 </div>
 
+<img src="../media/apfelonline.png" class="top-image-game" alt="Apfel Online Logo" width="20%">
+
+<div class="text-game-separator"></div>
+<div class="text-game-separator"></div>
+<div class="text-game-separator"></div>
+<div class="text-game-separator"></div>
+
   <!-- Run the game code -->
   <script type="text/javascript" src="html5game/RocketNetwork_AkinomoriLobby.js?cachebust=646515141"></script>
-
   <!-- Builtin injector for injecting runner path -->
   
 
   <script>window.onload = GameMaker_Init;</script>
 
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // Replace 'chat-container' with the actual ID of your chat container
-        var chatContainer = document.getElementById('chat-container');
-    
-        // Scroll the chat container to the bottom
-        chatContainer.scrollTop = chatContainer.scrollHeight;
-    });
-</script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        // Replace 'YOUR_API_KEY' and adjust the API endpoint as needed
-        const apiKey = 'xbt9wYJfJictC5MwljT3tGV2jCc2';
+        const apiKey = 'xbt9wYJfJictC5MwljT3tGV2jCc2'; //"blablabla this is dangerous" I KNOW
         const apiUrl = 'https://apps.rocketnetworking.net/api/database/logs/chat';
     
         function fetchData() {
-            // Make a GET request to retrieve the document
             fetch(apiUrl, {
                 method: 'GET',
                 headers: {
@@ -195,7 +172,6 @@ body{
                 }
             })
             .then(response => {
-                // Check if the request was successful (status code 200)
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);
                 }

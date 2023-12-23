@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rocket Networking API Chat Example</title>
+</head>
+<body>
+    <style>
+        #chat-container {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        body {
+            background-color: black;
+            color: #80fe80;
+            font-family: Courier, monospace;
+            /* font-weight: bold; */
+        }
+    </style>
+<div id="chat-container">
+    <!-- Display the chat messages here -->
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Replace 'YOUR_API_KEY' and adjust the API endpoint as needed
+        const apiKey = 'xbt9wYJfJictC5MwljT3tGV2jCc2';
+        const apiUrl = 'https://apps.rocketnetworking.net/api/database/logs/chat'; //Change the database to be logs/
+        //maybe always send the date and parse it out, Ocram check this out tomorrow 6899
+
+        function fetchData() {
+            // Make a GET request to retrieve the document
+            fetch(apiUrl, {
+                method: 'GET',
+                headers: {
+                    'Authorization': apiKey,
+                }
+            })
+            .then(response => {
+                // Check if the request was successful (status code 200)
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Convert JSON data to HTML and display in the chat container
+                const chatContainer = document.getElementById('chat-container');
+                chatContainer.innerHTML = '';
+    
+                // Get the total number of messages
+                const totalMessages = Object.keys(data).length;
+    
+                // Iterate over the messages from the last one to the first one
+                for (let i = totalMessages - 1; i >= 0; i--) {
+                    const messageKey = `chatmsg${i.toString().padStart(2, '0')}`; //6899 CHANGE chatmsg with DATEchatmsg when i add the date database
+                    if (data[messageKey] !== undefined && data[messageKey] !== "") {
+                        const messageDiv = document.createElement('div');
+                        messageDiv.textContent = data[messageKey];
+                        chatContainer.appendChild(messageDiv);
+                    }
+                }
+            })
+            .catch(error => {
+                // Handle errors
+                console.error("Fetch error:", error);
+            });
+        }
+    
+        // Fetch data initially
+        fetchData();
+    
+        // Set up a setInterval to fetch data every 5 seconds (adjust as needed)
+        setInterval(fetchData, 5000);
+    });
+    </script>
+        
+    
+    
+
+</body>
+</html>
