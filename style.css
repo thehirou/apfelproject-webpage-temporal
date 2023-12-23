@@ -9,7 +9,7 @@ body {
 
 @font-face {
   font-family: "CustomFont";
-  src: url("media/apfelFontV01.ttf") f  ormat("truetype");
+  src: url("media/apfelFontV01.ttf") format("truetype");
 }
 
 .apfel-font h1 {
