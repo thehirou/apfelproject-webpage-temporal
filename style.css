@@ -16,6 +16,13 @@ body {
   font-family: "CustomFont", sans-serif;
 }
 
+.top-image-game {
+  position: fixed;
+  top: 50px;
+  left: 50px;
+}
+
+
 .chatroom-container-container
 {
   margin: 20px;
