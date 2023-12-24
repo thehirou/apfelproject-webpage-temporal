@@ -119,7 +119,7 @@ body{
   <div class="game-container">
     
     <div class="game-separator"></div>
-    <p><span style="color: #00ff00;">24/12/2023: Apfel Online will be kinda not working properly for some time lol</span></p>
+    <!-- <p><span style="color: #00ff00;">24/12/2023: Apfel Online will be kinda not working properly for some time lol</span></p> -->
     <div class="game-separator"></div>
     <div class="gm4html5_div_class" id="gm4html5_div_id">
       <!-- Builtin injector for splash screen -->
@@ -162,7 +162,7 @@ body{
   <script>window.onload = GameMaker_Init;</script>
 
 
-<script>
+  <script>
     document.addEventListener("DOMContentLoaded", function() {
         const apiKey = 'xbt9wYJfJictC5MwljT3tGV2jCc2'; //"blablabla this is dangerous" I KNOW
         const apiUrl = 'https://apps.rocketnetworking.net/api/database/logs/chat';
@@ -190,8 +190,11 @@ body{
     
                 // Iterate over the sorted message keys
                 for (const messageKey of messageKeys) {
+                    // Use a regular expression to remove text between "DATE-¿" and "?-DATE"
+                    const cleanMessage = data[messageKey].replace(/DATE-ç.*ç-DATE/g, '');
+                    
                     const messageDiv = document.createElement('div');
-                    messageDiv.textContent = data[messageKey];
+                    messageDiv.textContent = cleanMessage;
                     chatContainer.appendChild(messageDiv);
                 }
     
@@ -210,7 +213,7 @@ body{
         // Set up a setInterval to fetch data every 0.5 seconds
         setInterval(fetchData, 500);
     });
-    </script>
+</script>
 
 
   </div>

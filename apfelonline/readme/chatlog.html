@@ -56,8 +56,11 @@
                 for (let i = totalMessages - 1; i >= 0; i--) {
                     const messageKey = `chatmsg${i.toString().padStart(2, '0')}`; //6899 CHANGE chatmsg with DATEchatmsg when i add the date database
                     if (data[messageKey] !== undefined && data[messageKey] !== "") {
+                        // Remove "DATE-ç" and "ç-DATE" occurrences
+                        const cleanedMessage = data[messageKey].replace(/DATE-ç|ç-DATE/g, '');
+                        
                         const messageDiv = document.createElement('div');
-                        messageDiv.textContent = data[messageKey];
+                        messageDiv.textContent = cleanedMessage;
                         chatContainer.appendChild(messageDiv);
                     }
                 }
@@ -71,10 +74,11 @@
         // Fetch data initially
         fetchData();
     
-        // Set up a setInterval to fetch data every 5 seconds (adjust as needed)
-        setInterval(fetchData, 5000);
+        // Set up a setInterval to fetch data every .5 seconds (adjust as needed)
+        setInterval(fetchData, 500);
     });
-    </script>
+</script>
+
         
     
     
