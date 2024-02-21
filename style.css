@@ -361,7 +361,7 @@ div#invisible
 
 /* TESTS */
 
-
+/*INDEXXXXX*/
 
 .image-container {
   position: relative;
@@ -457,4 +457,48 @@ div#invisible
 
 .image-container img:nth-child(3) {
   animation: moveUpDown 10s infinite alternate, glow 3s infinite;
+}
+
+
+/*ABOUTTTTTT*/
+
+/* style.css */
+.about-image-container {
+  position: relative;
+  width: 800px; /* Adjust as needed */
+  height: 900px; /* Adjust as needed */
+}
+
+.layer-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Ensure the image takes up the entire container */
+  height: 100%; /* Ensure the image takes up the entire container */
+  object-fit: contain; /* Maintain aspect ratio without cropping */
+  animation: hoverUpDown 10s infinite alternate ease-in-out;
+}
+
+.layer1 {
+  animation-delay: 0s;
+}
+
+.layer2 {
+  animation-delay: 1s;
+}
+
+.layer3 {
+  animation-delay: 2s;
+}
+
+@keyframes hoverUpDown {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-20px);
+  }
+  100% {
+      transform: translateY(0);
+  }
 }

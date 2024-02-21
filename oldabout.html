@@ -11,18 +11,16 @@
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://apfelproject.com/" />
-<meta property="og:title" content="Apfel Project by TheHirou" />
+<meta property="og:title" content="Apfel Project by Ocram Ratte" />
 <meta property="og:description" content="Discover the Apfel Project, an indie RPG with prerendered backgrounds, alchemy and rodents!" />
 <meta property="og:image" content="https://apfelproject.com/media/vhs_meta_card.png" />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content="https://apfelproject.com/" />
-<meta property="twitter:title" content="Apfel Project by TheHirou" />
+<meta property="twitter:title" content="Apfel Project by Ocram Ratte" />
 <meta property="twitter:description" content="Discover the Apfel Project, an indie RPG with prerendered backgrounds, alchemy and rodents!" />
 <meta property="twitter:image" content="https://apfelproject.com/media/vhs_meta_card.png" />
-
-<!-- Meta Tags Generated with https://metatags.io -->
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-983Q2MS834"></script>
 <script>
@@ -33,11 +31,20 @@
   gtag('config', 'G-983Q2MS834');
 </script>
 
+<meta property="og:image" content="media/web_card.png">
+<meta property="og:image:secure_url" content="media/web_card.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 
 
 <audio id="bgm" hidden="hidden" controls autoplay loop>
   <source src="media/mus_wow_a_piano_loop.ogg" type="audio/ogg">
 </audio>
+
+
+
+
 
 <script>
 let bgm = document.getElementById("bgm");
@@ -54,21 +61,51 @@ bgm.addEventListener("ended", () => {
   bgm.play();
 });
 </script>
+
+
 </head>
 <body>
-    <div class="about-image-container">
-        <img src="media/aboutmedia/layer1.png" alt="Layer 1" class="layer-img layer1">
-        <img src="media/aboutmedia/layer2.png" alt="Layer 2" class="layer-img layer2">
-        <img src="media/aboutmedia/layer3.png" alt="Layer 3" class="layer-img layer3">
-    </div>
 
 
 
 
+  <div class="container">
+    <!-- <img src="media/logo_placeholder.png" alt="Apfel Project logotype"> -->
+	
+		<p id="apfel-font-bigger">ABµUT <span style="color: white;"></span></p>
+
+    <div class="separator"> </div>
+    <div class="separator"> </div>
+
+
+		<p id="apfel-font">
+     <!-- The 'Apfel Project' is an indie RPG with prerendered backgrounds being developed by Hirou about a girl named <a href="media/apfel-mus.png">Apfel</a> and a rat named Kase. -->
+     Work in progress... (21/02/2024)
+    <br>
+    <br>
+     <!-- These two folks start a journey to seek what's hiding on the other side of the mountains that surround their land only to discover the secrets behind Apfel's existence... -->
+     <br>
+     <br>
+     <!-- I'm pretty sure that you will love my game if you like things like Fullmetal Alchemist, Final Fantasy VII, Adventure Time, Homestuck and all types of rodents. -->
+     <br>
+     <br>
+    </p>
+    
+    <a id="apfel-font-alt" href="kofi-credits.html">
+      <p>Ko-Fi Supporters <span style="color: white;"></span></p>
+      <br>
+    </a>
+
+    <div class="separator"> </div>
+    
+    <div class="separator"> </div>
+    <div class="separator"> </div>
+    <div class="separator"> </div>
+    <div class="separator"> </div>
 
   <div class="container-logo">
 
-      <a href="https://apfelproject.com">
+      <a href="index.html">
         <img src="media/back-logo.png" alt="Tumblr Logo" class="image-logo">
       </a>
 
@@ -76,7 +113,7 @@ bgm.addEventListener("ended", () => {
         <img src="media/apfel-logo.png" alt="Tumblr Logo" class="image-logo">
       </a>
 
-      <a href="kofi-credits.html">
+      <a href="https://www.ko-fi.com/thehirou">
         <img src="media/kofi-logo.png" alt="Kofi Logo" class="image-logo">
       </a>
 
@@ -91,11 +128,12 @@ bgm.addEventListener("ended", () => {
 
   </div>
 
-  <!-- <a id="apfel-font-alt" href="kofi-credits.html">
-    <p>Ko-Fi Supporters <span style="color: white;"></span></p>
-    <br>
-  </a> -->
-    
+
+		
+	<!-- Display the countdown timer in an element -->
+
+	
+  </div>
 
   <script>
     // Get the image element and audio element
@@ -118,6 +156,7 @@ bgm.addEventListener("ended", () => {
     audio.currentTime = 0; // Reset audio to the beginning
   }
   </script>
+
 
 </body>
 </html>
