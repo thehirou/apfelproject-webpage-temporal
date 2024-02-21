@@ -455,6 +455,6 @@ div#invisible
   }
 }
 
-.image-container img:nth-child(1) {
+.image-container img:nth-child(3) {
   animation: moveUpDown 10s infinite alternate, glow 3s infinite;
 }
