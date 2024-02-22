@@ -309,9 +309,12 @@ div#invisible
 }
 
 .container-logo {
+  position: sticky;
+  bottom: 50px; /* Stick to the bottom */
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 50px;
 }
 
 .container-logo a {
