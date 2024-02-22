@@ -2,6 +2,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 100%;
   margin: 0;
   background-color: #000000;
@@ -321,17 +322,17 @@ div#invisible
 
 .image-logo {
   opacity: 0.5;
-  width: 40%;
+  width: 90%;
   height: auto;
   transition: opacity 0.3s ease;
-  margin: 0 0px;
+  margin: 0px -50px;
 }
 
 
 
 .image-logo:hover {
   opacity: 1;
-  filter: drop-shadow(0 0 10px white) brightness(150%);
+  filter: drop-shadow(0 0 20px rgb(231, 144, 30)) brightness(100%);
   animation: glow 1s infinite alternate;
   animation: shake 2s ease-in-out infinite;
 }
@@ -466,7 +467,7 @@ div#invisible
 .about-image-container {
   position: relative;
   width: 800px; /* Adjust as needed */
-  height: 900px; /* Adjust as needed */
+  height: 800px; /* Adjust as needed */
 }
 
 .layer-img {
@@ -484,11 +485,11 @@ div#invisible
 }
 
 .layer2 {
-  animation-delay: 1s;
+  animation-delay: 0s;
 }
 
 .layer3 {
-  animation-delay: 2s;
+  animation-delay: 0s; /*Old shit idk*/
 }
 
 @keyframes hoverUpDown {
