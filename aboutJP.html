@@ -7,20 +7,20 @@
   <link rel="icon" type="image/png" href="media/Logo.png">
 <!-- Primary Meta Tags -->
 <meta name="title" content="APFEL PROJECT" />
-<meta name="description" content="The Apfel Project tells the story of Apfel, a girl that yearns to know what hides behind the mountains that surround her homeland only to discover the secrets behind her entire existence." />
+<meta name="description" content="「APFEL PROJECT（アッフェル・プロジェクト）」は、アプフェルという女の子の物語を語ります。彼女は自分の故郷を取り囲む山々の向こうに隠されたものを知りたがっています。そして、彼女の存在の背後に潜む秘密を発見することになります。" />
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://apfelproject.com/" />
 <meta property="og:title" content="Apfel Project by Ocram Ratte" />
-<meta property="og:description" content="The Apfel Project tells the story of Apfel, a girl that yearns to know what hides behind the mountains that surround her homeland only to discover the secrets behind her entire existence." />
+<meta property="og:description" content="「APFEL PROJECT（アッフェル・プロジェクト）」は、アプフェルという女の子の物語を語ります。彼女は自分の故郷を取り囲む山々の向こうに隠されたものを知りたがっています。そして、彼女の存在の背後に潜む秘密を発見することになります。" />
 <meta property="og:image" content="https://apfelproject.com/media/vhs_meta_card.png" />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content="https://apfelproject.com/" />
 <meta property="twitter:title" content="Apfel Project by Ocram Ratte" />
-<meta property="twitter:description" content="The Apfel Project tells the story of Apfel, a girl that yearns to know what hides behind the mountains that surround her homeland only to discover the secrets behind her entire existence." />
+<meta property="twitter:description" content="「APFEL PROJECT（アッフェル・プロジェクト）」は、アプフェルという女の子の物語を語ります。彼女は自分の故郷を取り囲む山々の向こうに隠されたものを知りたがっています。そして、彼女の存在の背後に潜む秘密を発見することになります。" />
 <meta property="twitter:image" content="https://apfelproject.com/media/vhs_meta_card.png" />
 
 
@@ -48,16 +48,17 @@ bgm.play().catch(() => {
   }, { once: true });
 });
 
-// When the audio finishes, reset it to the beginning and play again
+
 bgm.addEventListener("ended", () => {
-  bgm.currentTime = 0; // Reset audio to the beginning
+  bgm.currentTime = 0;
   bgm.play();
 });
 </script>
 </head>
 <body>
     <div class="about-image-container">
-      <img src="media/aboutmedia/underLayer.gif" alt="THE APFEL PROJECT TELLS THE STORY OF APFEL, A GIRL THAT YEARNS TO KNOW WHAT HIDES BEHIND THE MOUNTAINS THAT SURROUND HER HOMELAND ONLY TO DISCOVER THE SECRETS BEHIND HER ENTIRE EXISTENCE" class="layer-img layer2">
+      <!-- I AM AWARE THE TEXT IS TOO SMALL!!!! -->
+      <img src="media/aboutmedia/underLayerJap.gif" alt="DEEPL:「APFEL PROJECT（アッフェル・プロジェクト）」は、アプフェルという女の子の物語を語ります。彼女は自分の故郷を取り囲む山々の向こうに隠されたものを知りたがっています。そして、彼女の存在の背後に潜む秘密を発見することになります。" class="layer-img layer2">
       <img src="media/aboutmedia/topLayer.png" alt="Layer 1" class="layer-img layer1">
         
         <!-- <img src="media/aboutmedia/layer1.png" alt="Layer 1" class="layer-img layer1">
@@ -86,8 +87,8 @@ bgm.addEventListener("ended", () => {
         <img src="media/twitter-logo.png" alt="Twitter Logo" class="image-logo">
       </a>
 
-      <a href="aboutJP.html">
-        <img src="media/jap-logo.png" alt="Japanese Lang" class="image-logo">
+      <a href="about.html">
+        <img src="media/eng-logo.png" alt="English Lang" class="image-logo">
       </a>
 
       <audio id="hover-sound">
